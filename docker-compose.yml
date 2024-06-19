@@ -22,12 +22,12 @@ services:
       timeout: 30s
       retries: 3      
       # - ./conf/:/etc/rabbitmq/
-    # command: bash -c "sleep 10; rabbitmq-server;"
+    #command: bash -c "sleep 10; rabbitmq-server;"
 
 volumes:
   rabbit1:
     #external: true
-    driver: local
+    #driver: local
 
 networks:
   back:
