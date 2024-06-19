@@ -14,6 +14,8 @@ services:
       - RABBITMQ_DEFAULT_PASS=testpassword
     volumes:
       - rabbit1:/var/lib/rabbitmq
+    networks:
+      - back      
       # - ./conf/:/etc/rabbitmq/
     # command: bash -c "sleep 10; rabbitmq-server;"
 
@@ -23,5 +25,4 @@ volumes:
     driver: local
 
 networks:
-  default:
-    driver: bridge
+  back:
