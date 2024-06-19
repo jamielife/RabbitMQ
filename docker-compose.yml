@@ -20,14 +20,14 @@ services:
       test: 'rabbitmq-diagnostics -q ping'
       interval: 30s
       timeout: 30s
-      retries: 3
+      retries: 3      
       # - ./conf/:/etc/rabbitmq/
-    #command: bash -c "sleep 10; rabbitmq-server;"
+    # command: bash -c "sleep 10; rabbitmq-server;"
 
-  volumes:
-    rabbit1:
-      #external: true
-      driver: local
+volumes:
+  rabbit1:
+    #external: true
+    driver: local
 
-  networks:
-    back:
+networks:
+  back:
