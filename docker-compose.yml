@@ -24,10 +24,10 @@ services:
       # - ./conf/:/etc/rabbitmq/
     #command: bash -c "sleep 10; rabbitmq-server;"
 
-volumes:
-  rabbit1:
-    #external: true
-    #driver: local
+  volumes:
+    rabbit1:
+      #external: true
+      driver: local
 
-networks:
-  back:
+  networks:
+    back:
