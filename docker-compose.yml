@@ -15,7 +15,7 @@ services:
     volumes:
       - rabbit1:/var/lib/rabbitmq
     networks:
-      - back
+      - coolify
     healthcheck:
       test: 'rabbitmq-diagnostics -q ping'
       interval: 30s
@@ -30,4 +30,4 @@ volumes:
     driver: local
 
 networks:
-  back:
+  coolify:
