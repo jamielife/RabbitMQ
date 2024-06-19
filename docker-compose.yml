@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 
 services:
   rabbitmq:
@@ -12,7 +12,7 @@ services:
       - RABBITMQ_DEFAULT_USER=jamie
       - RABBITMQ_DEFAULT_PASS=testpassword
     volumes:
-      - rabbit1:/var/lib/rabbitmq
+      - "rabbit1:/var/lib/rabbitmq"
     networks:
       - coolify
     healthcheck:
@@ -26,7 +26,7 @@ services:
 volumes:
   rabbit1:
     #external: true
-    driver: local
+    #driver: local
 
 networks:
   coolify:
