@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3.13.3-management-alpine
+    container_name: rabbitmq
+    hostname: rabbitmq
+    restart: always
+    ports:
+      - "5678:5672"
+      - "15678:15672"
+    environment:
+      - RABBITMQ_DEFAULT_USER=jamie
+      - RABBITMQ_DEFAULT_PASS=testpassword
+    volumes:
+      - rabbit1:/var/lib/rabbitmq
+      # - ./conf/:/etc/rabbitmq/
+    # command: bash -c "sleep 10; rabbitmq-server;"
+
+volumes:
+  rabbit1:
+    #external: true
+    driver: local
+
+networks:
+  default:
+    driver: bridge
