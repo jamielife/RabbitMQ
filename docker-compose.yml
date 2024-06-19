@@ -12,7 +12,7 @@ services:
       - RABBITMQ_DEFAULT_USER=jamie
       - RABBITMQ_DEFAULT_PASS=testpassword
     volumes:
-      - "rabbit1:/var/lib/rabbitmq"
+      - rabbitmq_data:/var/lib/rabbitmq
     networks:
       - coolify
     healthcheck:
@@ -24,7 +24,7 @@ services:
     # command: bash -c "sleep 10; rabbitmq-server;"
 
 volumes:
-  rabbit1:
+  rabbitmq_data:
     #external: true
     #driver: local
 
