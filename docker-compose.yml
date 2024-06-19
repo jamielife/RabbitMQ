@@ -12,6 +12,7 @@ services:
       - RABBITMQ_DEFAULT_USER=jamie
       - RABBITMQ_DEFAULT_PASS=testpassword
     volumes:
+      - ./data:/var/lib/rabbitmq/mnesia/
       - rabbitmq_data:/var/lib/rabbitmq
     networks:
       - coolify
